@@ -1861,6 +1861,458 @@ function App() {
           </div>
         </div>
       </div>
+
+      {/* Timeline de Experiências Profissionais */}
+      <div style={{
+        padding: '80px 20px',
+        background: isDarkTheme 
+          ? 'linear-gradient(135deg, #1a202c 0%, #2d3748 100%)' 
+          : 'linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%)',
+        minHeight: '100vh'
+      }}>
+        <div style={{
+          maxWidth: '1200px',
+          margin: '0 auto'
+        }}>
+          <div style={{
+            textAlign: 'center',
+            marginBottom: '60px'
+          }}>
+            <h2 style={{
+              fontSize: '48px',
+              fontWeight: '700',
+              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              margin: '0 0 20px 0',
+              textAlign: 'center'
+            }}>
+              Experiência Profissional
+            </h2>
+            <p style={{
+              fontSize: '18px',
+              color: isDarkTheme ? '#a0aec0' : '#718096',
+              maxWidth: '600px',
+              margin: '0 auto',
+              lineHeight: '1.6'
+            }}>
+              Minha jornada profissional e principais conquistas ao longo da carreira
+            </p>
+          </div>
+
+          {/* Timeline Container */}
+          <div style={{
+            position: 'relative',
+            maxWidth: '800px',
+            margin: '0 auto'
+          }}>
+            {/* Linha vertical da timeline */}
+            <div style={{
+              position: 'absolute',
+              left: '50%',
+              top: 0,
+              bottom: 0,
+              width: '4px',
+              background: 'linear-gradient(180deg, #667eea 0%, #764ba2 100%)',
+              transform: 'translateX(-50%)',
+              borderRadius: '2px'
+            }}></div>
+
+            {/* Experiência 1 - Atual */}
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              marginBottom: '60px',
+              position: 'relative'
+            }}>
+              {/* Conteúdo à esquerda */}
+              <div style={{
+                width: '45%',
+                textAlign: 'right',
+                paddingRight: '30px'
+              }}>
+                <div style={{
+                  backgroundColor: isDarkTheme ? '#1a202c' : 'white',
+                  padding: '25px',
+                  borderRadius: '15px',
+                  boxShadow: isDarkTheme 
+                    ? '0 10px 30px rgba(0, 0, 0, 0.3)' 
+                    : '0 10px 30px rgba(0, 0, 0, 0.1)',
+                  border: isDarkTheme ? '1px solid #2d3748' : '1px solid #e2e8f0',
+                  transition: 'all 0.3s ease'
+                }}>
+                  <div style={{
+                    display: 'inline-block',
+                    backgroundColor: '#48bb78',
+                    color: 'white',
+                    padding: '4px 12px',
+                    borderRadius: '20px',
+                    fontSize: '12px',
+                    fontWeight: '600',
+                    marginBottom: '15px'
+                  }}>
+                    2023 - Atual
+                  </div>
+                  <h3 style={{
+                    fontSize: '22px',
+                    fontWeight: '600',
+                    color: isDarkTheme ? '#e2e8f0' : '#2d3748',
+                    margin: '0 0 10px 0'
+                  }}>
+                    Desenvolvedor Full Stack
+                  </h3>
+                  <h4 style={{
+                    fontSize: '16px',
+                    fontWeight: '500',
+                    color: '#667eea',
+                    margin: '0 0 15px 0'
+                  }}>
+                    Tech Solutions Inc.
+                  </h4>
+                  <p style={{
+                    fontSize: '14px',
+                    color: isDarkTheme ? '#cbd5e0' : '#666',
+                    lineHeight: '1.6',
+                    margin: '0 0 15px 0'
+                  }}>
+                    Desenvolvimento de aplicações web modernas utilizando React, Node.js e MongoDB. Responsável por arquitetura de sistemas e liderança técnica de projetos.
+                  </p>
+                  <div style={{
+                    display: 'flex',
+                    gap: '8px',
+                    flexWrap: 'wrap',
+                    justifyContent: 'flex-end'
+                  }}>
+                    {['React', 'Node.js', 'MongoDB', 'AWS'].map((tech, index) => (
+                      <span key={index} style={{
+                        backgroundColor: isDarkTheme ? '#2d3748' : '#f1f5f9',
+                        color: isDarkTheme ? '#e2e8f0' : '#475569',
+                        padding: '4px 10px',
+                        borderRadius: '10px',
+                        fontSize: '11px',
+                        fontWeight: '500'
+                      }}>
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Ponto central */}
+              <div style={{
+                position: 'absolute',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                width: '20px',
+                height: '20px',
+                backgroundColor: '#48bb78',
+                borderRadius: '50%',
+                border: '4px solid ' + (isDarkTheme ? '#1a202c' : 'white'),
+                boxShadow: '0 0 0 4px #48bb78',
+                zIndex: 2
+              }}></div>
+
+              {/* Espaço à direita */}
+              <div style={{ width: '45%' }}></div>
+            </div>
+
+            {/* Experiência 2 */}
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              marginBottom: '60px',
+              position: 'relative'
+            }}>
+              {/* Espaço à esquerda */}
+              <div style={{ width: '45%' }}></div>
+
+              {/* Ponto central */}
+              <div style={{
+                position: 'absolute',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                width: '20px',
+                height: '20px',
+                backgroundColor: '#4299e1',
+                borderRadius: '50%',
+                border: '4px solid ' + (isDarkTheme ? '#1a202c' : 'white'),
+                boxShadow: '0 0 0 4px #4299e1',
+                zIndex: 2
+              }}></div>
+
+              {/* Conteúdo à direita */}
+              <div style={{
+                width: '45%',
+                paddingLeft: '30px'
+              }}>
+                <div style={{
+                  backgroundColor: isDarkTheme ? '#1a202c' : 'white',
+                  padding: '25px',
+                  borderRadius: '15px',
+                  boxShadow: isDarkTheme 
+                    ? '0 10px 30px rgba(0, 0, 0, 0.3)' 
+                    : '0 10px 30px rgba(0, 0, 0, 0.1)',
+                  border: isDarkTheme ? '1px solid #2d3748' : '1px solid #e2e8f0',
+                  transition: 'all 0.3s ease'
+                }}>
+                  <div style={{
+                    display: 'inline-block',
+                    backgroundColor: '#4299e1',
+                    color: 'white',
+                    padding: '4px 12px',
+                    borderRadius: '20px',
+                    fontSize: '12px',
+                    fontWeight: '600',
+                    marginBottom: '15px'
+                  }}>
+                    2021 - 2023
+                  </div>
+                  <h3 style={{
+                    fontSize: '22px',
+                    fontWeight: '600',
+                    color: isDarkTheme ? '#e2e8f0' : '#2d3748',
+                    margin: '0 0 10px 0'
+                  }}>
+                    Desenvolvedor Frontend
+                  </h3>
+                  <h4 style={{
+                    fontSize: '16px',
+                    fontWeight: '500',
+                    color: '#667eea',
+                    margin: '0 0 15px 0'
+                  }}>
+                    Digital Agency Pro
+                  </h4>
+                  <p style={{
+                    fontSize: '14px',
+                    color: isDarkTheme ? '#cbd5e0' : '#666',
+                    lineHeight: '1.6',
+                    margin: '0 0 15px 0'
+                  }}>
+                    Criação de interfaces responsivas e experiências de usuário excepcionais. Colaboração com equipes de design para implementar soluções inovadoras.
+                  </p>
+                  <div style={{
+                    display: 'flex',
+                    gap: '8px',
+                    flexWrap: 'wrap'
+                  }}>
+                    {['React', 'TypeScript', 'Sass', 'Figma'].map((tech, index) => (
+                      <span key={index} style={{
+                        backgroundColor: isDarkTheme ? '#2d3748' : '#f1f5f9',
+                        color: isDarkTheme ? '#e2e8f0' : '#475569',
+                        padding: '4px 10px',
+                        borderRadius: '10px',
+                        fontSize: '11px',
+                        fontWeight: '500'
+                      }}>
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Experiência 3 */}
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              marginBottom: '60px',
+              position: 'relative'
+            }}>
+              {/* Conteúdo à esquerda */}
+              <div style={{
+                width: '45%',
+                textAlign: 'right',
+                paddingRight: '30px'
+              }}>
+                <div style={{
+                  backgroundColor: isDarkTheme ? '#1a202c' : 'white',
+                  padding: '25px',
+                  borderRadius: '15px',
+                  boxShadow: isDarkTheme 
+                    ? '0 10px 30px rgba(0, 0, 0, 0.3)' 
+                    : '0 10px 30px rgba(0, 0, 0, 0.1)',
+                  border: isDarkTheme ? '1px solid #2d3748' : '1px solid #e2e8f0',
+                  transition: 'all 0.3s ease'
+                }}>
+                  <div style={{
+                    display: 'inline-block',
+                    backgroundColor: '#ed8936',
+                    color: 'white',
+                    padding: '4px 12px',
+                    borderRadius: '20px',
+                    fontSize: '12px',
+                    fontWeight: '600',
+                    marginBottom: '15px'
+                  }}>
+                    2019 - 2021
+                  </div>
+                  <h3 style={{
+                    fontSize: '22px',
+                    fontWeight: '600',
+                    color: isDarkTheme ? '#e2e8f0' : '#2d3748',
+                    margin: '0 0 10px 0'
+                  }}>
+                    Designer UI/UX
+                  </h3>
+                  <h4 style={{
+                    fontSize: '16px',
+                    fontWeight: '500',
+                    color: '#667eea',
+                    margin: '0 0 15px 0'
+                  }}>
+                    Creative Studio
+                  </h4>
+                  <p style={{
+                    fontSize: '14px',
+                    color: isDarkTheme ? '#cbd5e0' : '#666',
+                    lineHeight: '1.6',
+                    margin: '0 0 15px 0'
+                  }}>
+                    Design de interfaces e experiências digitais focadas no usuário. Prototipagem, testes de usabilidade e criação de sistemas de design.
+                  </p>
+                  <div style={{
+                    display: 'flex',
+                    gap: '8px',
+                    flexWrap: 'wrap',
+                    justifyContent: 'flex-end'
+                  }}>
+                    {['Figma', 'Adobe XD', 'Sketch', 'Photoshop'].map((tech, index) => (
+                      <span key={index} style={{
+                        backgroundColor: isDarkTheme ? '#2d3748' : '#f1f5f9',
+                        color: isDarkTheme ? '#e2e8f0' : '#475569',
+                        padding: '4px 10px',
+                        borderRadius: '10px',
+                        fontSize: '11px',
+                        fontWeight: '500'
+                      }}>
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Ponto central */}
+              <div style={{
+                position: 'absolute',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                width: '20px',
+                height: '20px',
+                backgroundColor: '#ed8936',
+                borderRadius: '50%',
+                border: '4px solid ' + (isDarkTheme ? '#1a202c' : 'white'),
+                boxShadow: '0 0 0 4px #ed8936',
+                zIndex: 2
+              }}></div>
+
+              {/* Espaço à direita */}
+              <div style={{ width: '45%' }}></div>
+            </div>
+
+            {/* Experiência 4 - Início */}
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              marginBottom: '40px',
+              position: 'relative'
+            }}>
+              {/* Espaço à esquerda */}
+              <div style={{ width: '45%' }}></div>
+
+              {/* Ponto central */}
+              <div style={{
+                position: 'absolute',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                width: '20px',
+                height: '20px',
+                backgroundColor: '#9f7aea',
+                borderRadius: '50%',
+                border: '4px solid ' + (isDarkTheme ? '#1a202c' : 'white'),
+                boxShadow: '0 0 0 4px #9f7aea',
+                zIndex: 2
+              }}></div>
+
+              {/* Conteúdo à direita */}
+              <div style={{
+                width: '45%',
+                paddingLeft: '30px'
+              }}>
+                <div style={{
+                  backgroundColor: isDarkTheme ? '#1a202c' : 'white',
+                  padding: '25px',
+                  borderRadius: '15px',
+                  boxShadow: isDarkTheme 
+                    ? '0 10px 30px rgba(0, 0, 0, 0.3)' 
+                    : '0 10px 30px rgba(0, 0, 0, 0.1)',
+                  border: isDarkTheme ? '1px solid #2d3748' : '1px solid #e2e8f0',
+                  transition: 'all 0.3s ease'
+                }}>
+                  <div style={{
+                    display: 'inline-block',
+                    backgroundColor: '#9f7aea',
+                    color: 'white',
+                    padding: '4px 12px',
+                    borderRadius: '20px',
+                    fontSize: '12px',
+                    fontWeight: '600',
+                    marginBottom: '15px'
+                  }}>
+                    2018 - 2019
+                  </div>
+                  <h3 style={{
+                    fontSize: '22px',
+                    fontWeight: '600',
+                    color: isDarkTheme ? '#e2e8f0' : '#2d3748',
+                    margin: '0 0 10px 0'
+                  }}>
+                    Estagiário em Desenvolvimento
+                  </h3>
+                  <h4 style={{
+                    fontSize: '16px',
+                    fontWeight: '500',
+                    color: '#667eea',
+                    margin: '0 0 15px 0'
+                  }}>
+                    StartUp Tech
+                  </h4>
+                  <p style={{
+                    fontSize: '14px',
+                    color: isDarkTheme ? '#cbd5e0' : '#666',
+                    lineHeight: '1.6',
+                    margin: '0 0 15px 0'
+                  }}>
+                    Início da jornada profissional com foco em desenvolvimento web. Aprendizado de tecnologias fundamentais e participação em projetos reais.
+                  </p>
+                  <div style={{
+                    display: 'flex',
+                    gap: '8px',
+                    flexWrap: 'wrap'
+                  }}>
+                    {['HTML', 'CSS', 'JavaScript', 'Git'].map((tech, index) => (
+                      <span key={index} style={{
+                        backgroundColor: isDarkTheme ? '#2d3748' : '#f1f5f9',
+                        color: isDarkTheme ? '#e2e8f0' : '#475569',
+                        padding: '4px 10px',
+                        borderRadius: '10px',
+                        fontSize: '11px',
+                        fontWeight: '500'
+                      }}>
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       
       {/* Modal de preview da foto de perfil */}
        {showProfilePreview && (
