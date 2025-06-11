@@ -852,6 +852,271 @@ function App() {
            </div>
          </div>
       </div>
+
+      {/* Seção de Projetos/Portfólio */}
+      <div style={{
+        padding: '60px 20px',
+        background: isDarkTheme 
+          ? 'linear-gradient(135deg, #1a202c 0%, #2d3748 100%)' 
+          : 'linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%)',
+        minHeight: '100vh'
+      }}>
+        <div style={{
+          maxWidth: '1200px',
+          margin: '0 auto'
+        }}>
+          <h2 style={{
+            textAlign: 'center',
+            marginBottom: '50px',
+            color: isDarkTheme ? '#e2e8f0' : '#2d3748',
+            fontFamily: '"Poppins", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif',
+            fontWeight: '600',
+            fontSize: '36px',
+            position: 'relative'
+          }}>
+            Meus Projetos
+            <div style={{
+              position: 'absolute',
+              bottom: '-12px',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              width: '80px',
+              height: '4px',
+              background: 'linear-gradient(90deg, #667eea, #764ba2)',
+              borderRadius: '2px'
+            }}></div>
+          </h2>
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+            gap: '30px',
+            marginTop: '40px'
+          }}>
+            {/* Projeto 1 */}
+            <div style={{
+              backgroundColor: isDarkTheme ? '#1a202c' : 'white',
+              borderRadius: '20px',
+              overflow: 'hidden',
+              boxShadow: isDarkTheme 
+                ? '0 15px 35px rgba(0, 0, 0, 0.3)' 
+                : '0 15px 35px rgba(0, 0, 0, 0.1)',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-10px)';
+              e.currentTarget.style.boxShadow = isDarkTheme 
+                ? '0 25px 50px rgba(0, 0, 0, 0.4)' 
+                : '0 25px 50px rgba(0, 0, 0, 0.15)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = isDarkTheme 
+                ? '0 15px 35px rgba(0, 0, 0, 0.3)' 
+                : '0 15px 35px rgba(0, 0, 0, 0.1)';
+            }}>
+              <div style={{
+                height: '200px',
+                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'white',
+                fontSize: '48px'
+              }}>
+                🎨
+              </div>
+              <div style={{
+                padding: '25px'
+              }}>
+                <h3 style={{
+                  margin: '0 0 15px 0',
+                  color: isDarkTheme ? '#e2e8f0' : '#2d3748',
+                  fontSize: '22px',
+                  fontWeight: '600'
+                }}>
+                  Design de Interface
+                </h3>
+                <p style={{
+                  margin: '0 0 20px 0',
+                  color: isDarkTheme ? '#cbd5e0' : '#666',
+                  fontSize: '14px',
+                  lineHeight: '1.6'
+                }}>
+                  Criação de interfaces modernas e responsivas utilizando as melhores práticas de UX/UI Design.
+                </p>
+                <div style={{
+                  display: 'flex',
+                  gap: '8px',
+                  flexWrap: 'wrap'
+                }}>
+                  {['Figma', 'Adobe XD', 'Photoshop'].map((tech, index) => (
+                    <span key={index} style={{
+                      backgroundColor: isDarkTheme ? '#2d3748' : '#f1f5f9',
+                      color: isDarkTheme ? '#e2e8f0' : '#475569',
+                      padding: '4px 12px',
+                      borderRadius: '12px',
+                      fontSize: '12px',
+                      fontWeight: '500'
+                    }}>
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Projeto 2 */}
+            <div style={{
+              backgroundColor: isDarkTheme ? '#1a202c' : 'white',
+              borderRadius: '20px',
+              overflow: 'hidden',
+              boxShadow: isDarkTheme 
+                ? '0 15px 35px rgba(0, 0, 0, 0.3)' 
+                : '0 15px 35px rgba(0, 0, 0, 0.1)',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-10px)';
+              e.currentTarget.style.boxShadow = isDarkTheme 
+                ? '0 25px 50px rgba(0, 0, 0, 0.4)' 
+                : '0 25px 50px rgba(0, 0, 0, 0.15)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = isDarkTheme 
+                ? '0 15px 35px rgba(0, 0, 0, 0.3)' 
+                : '0 15px 35px rgba(0, 0, 0, 0.1)';
+            }}>
+              <div style={{
+                height: '200px',
+                background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'white',
+                fontSize: '48px'
+              }}>
+                💻
+              </div>
+              <div style={{
+                padding: '25px'
+              }}>
+                <h3 style={{
+                  margin: '0 0 15px 0',
+                  color: isDarkTheme ? '#e2e8f0' : '#2d3748',
+                  fontSize: '22px',
+                  fontWeight: '600'
+                }}>
+                  Desenvolvimento Web
+                </h3>
+                <p style={{
+                  margin: '0 0 20px 0',
+                  color: isDarkTheme ? '#cbd5e0' : '#666',
+                  fontSize: '14px',
+                  lineHeight: '1.6'
+                }}>
+                  Desenvolvimento de aplicações web modernas e responsivas com foco na experiência do usuário.
+                </p>
+                <div style={{
+                  display: 'flex',
+                  gap: '8px',
+                  flexWrap: 'wrap'
+                }}>
+                  {['React', 'JavaScript', 'CSS'].map((tech, index) => (
+                    <span key={index} style={{
+                      backgroundColor: isDarkTheme ? '#2d3748' : '#f1f5f9',
+                      color: isDarkTheme ? '#e2e8f0' : '#475569',
+                      padding: '4px 12px',
+                      borderRadius: '12px',
+                      fontSize: '12px',
+                      fontWeight: '500'
+                    }}>
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Projeto 3 */}
+            <div style={{
+              backgroundColor: isDarkTheme ? '#1a202c' : 'white',
+              borderRadius: '20px',
+              overflow: 'hidden',
+              boxShadow: isDarkTheme 
+                ? '0 15px 35px rgba(0, 0, 0, 0.3)' 
+                : '0 15px 35px rgba(0, 0, 0, 0.1)',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-10px)';
+              e.currentTarget.style.boxShadow = isDarkTheme 
+                ? '0 25px 50px rgba(0, 0, 0, 0.4)' 
+                : '0 25px 50px rgba(0, 0, 0, 0.15)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = isDarkTheme 
+                ? '0 15px 35px rgba(0, 0, 0, 0.3)' 
+                : '0 15px 35px rgba(0, 0, 0, 0.1)';
+            }}>
+              <div style={{
+                height: '200px',
+                background: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'white',
+                fontSize: '48px'
+              }}>
+                📱
+              </div>
+              <div style={{
+                padding: '25px'
+              }}>
+                <h3 style={{
+                  margin: '0 0 15px 0',
+                  color: isDarkTheme ? '#e2e8f0' : '#2d3748',
+                  fontSize: '22px',
+                  fontWeight: '600'
+                }}>
+                  Design Mobile
+                </h3>
+                <p style={{
+                  margin: '0 0 20px 0',
+                  color: isDarkTheme ? '#cbd5e0' : '#666',
+                  fontSize: '14px',
+                  lineHeight: '1.6'
+                }}>
+                  Criação de interfaces mobile intuitivas e otimizadas para diferentes dispositivos e plataformas.
+                </p>
+                <div style={{
+                  display: 'flex',
+                  gap: '8px',
+                  flexWrap: 'wrap'
+                }}>
+                  {['Flutter', 'React Native', 'Swift'].map((tech, index) => (
+                    <span key={index} style={{
+                      backgroundColor: isDarkTheme ? '#2d3748' : '#f1f5f9',
+                      color: isDarkTheme ? '#e2e8f0' : '#475569',
+                      padding: '4px 12px',
+                      borderRadius: '12px',
+                      fontSize: '12px',
+                      fontWeight: '500'
+                    }}>
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       
       {/* Modal de preview da foto de perfil */}
        {showProfilePreview && (
