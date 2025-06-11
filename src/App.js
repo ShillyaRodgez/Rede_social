@@ -963,17 +963,18 @@ function App() {
                   Interface Adobe XD
                 </h3>
                 <p style={{
-                  margin: '0 0 20px 0',
+                  margin: '0 0 15px 0',
                   color: isDarkTheme ? '#cbd5e0' : '#666',
                   fontSize: '14px',
                   lineHeight: '1.6'
                 }}>
-                  Design de interface moderna e intuitiva criada no Adobe XD com foco na experiência do usuário.
+                  Design de interface moderna e intuitiva criada no Adobe XD com foco na experiência do usuário. Projeto completo incluindo wireframes, protótipos interativos e guia de estilo.
                 </p>
                 <div style={{
                   display: 'flex',
                   gap: '8px',
-                  flexWrap: 'wrap'
+                  flexWrap: 'wrap',
+                  marginBottom: '20px'
                 }}>
                   {['Adobe XD', 'UI/UX', 'Prototyping'].map((tech, index) => (
                     <span key={index} style={{
@@ -987,6 +988,68 @@ function App() {
                       {tech}
                     </span>
                   ))}
+                </div>
+                <div style={{
+                  display: 'flex',
+                  gap: '10px',
+                  flexWrap: 'wrap'
+                }}>
+                  <a 
+                    href="https://github.com/usuario/projeto-xd" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    style={{
+                      backgroundColor: isDarkTheme ? '#667eea' : '#667eea',
+                      color: 'white',
+                      padding: '8px 16px',
+                      borderRadius: '8px',
+                      textDecoration: 'none',
+                      fontSize: '13px',
+                      fontWeight: '500',
+                      transition: 'all 0.3s ease',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '6px'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.backgroundColor = '#5a67d8';
+                      e.target.style.transform = 'translateY(-2px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.backgroundColor = '#667eea';
+                      e.target.style.transform = 'translateY(0)';
+                    }}
+                  >
+                    📁 Ver Código
+                  </a>
+                  <a 
+                    href="https://projeto-demo.netlify.app" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    style={{
+                      backgroundColor: isDarkTheme ? '#48bb78' : '#48bb78',
+                      color: 'white',
+                      padding: '8px 16px',
+                      borderRadius: '8px',
+                      textDecoration: 'none',
+                      fontSize: '13px',
+                      fontWeight: '500',
+                      transition: 'all 0.3s ease',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '6px'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.backgroundColor = '#38a169';
+                      e.target.style.transform = 'translateY(-2px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.backgroundColor = '#48bb78';
+                      e.target.style.transform = 'translateY(0)';
+                    }}
+                  >
+                    🚀 Demo Live
+                  </a>
                 </div>
               </div>
             </div>
@@ -1061,17 +1124,18 @@ function App() {
                   Aplicação React
                 </h3>
                 <p style={{
-                  margin: '0 0 20px 0',
+                  margin: '0 0 15px 0',
                   color: isDarkTheme ? '#cbd5e0' : '#666',
                   fontSize: '14px',
                   lineHeight: '1.6'
                 }}>
-                  Desenvolvimento de aplicação web moderna utilizando React com componentes reutilizáveis e responsivos.
+                  Desenvolvimento de aplicação web moderna utilizando React com componentes reutilizáveis e responsivos. Inclui gerenciamento de estado, roteamento e integração com APIs REST.
                 </p>
                 <div style={{
                   display: 'flex',
                   gap: '8px',
-                  flexWrap: 'wrap'
+                  flexWrap: 'wrap',
+                  marginBottom: '20px'
                 }}>
                   {['React', 'JavaScript', 'CSS3'].map((tech, index) => (
                     <span key={index} style={{
@@ -1085,6 +1149,68 @@ function App() {
                       {tech}
                     </span>
                   ))}
+                </div>
+                <div style={{
+                  display: 'flex',
+                  gap: '10px',
+                  flexWrap: 'wrap'
+                }}>
+                  <a 
+                    href="https://github.com/usuario/projeto-react" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    style={{
+                      backgroundColor: isDarkTheme ? '#4facfe' : '#4facfe',
+                      color: 'white',
+                      padding: '8px 16px',
+                      borderRadius: '8px',
+                      textDecoration: 'none',
+                      fontSize: '13px',
+                      fontWeight: '500',
+                      transition: 'all 0.3s ease',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '6px'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.backgroundColor = '#3182ce';
+                      e.target.style.transform = 'translateY(-2px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.backgroundColor = '#4facfe';
+                      e.target.style.transform = 'translateY(0)';
+                    }}
+                  >
+                    📁 Ver Código
+                  </a>
+                  <a 
+                    href="https://react-app-demo.vercel.app" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    style={{
+                      backgroundColor: isDarkTheme ? '#00f2fe' : '#00f2fe',
+                      color: 'white',
+                      padding: '8px 16px',
+                      borderRadius: '8px',
+                      textDecoration: 'none',
+                      fontSize: '13px',
+                      fontWeight: '500',
+                      transition: 'all 0.3s ease',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '6px'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.backgroundColor = '#0bc5ea';
+                      e.target.style.transform = 'translateY(-2px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.backgroundColor = '#00f2fe';
+                      e.target.style.transform = 'translateY(0)';
+                    }}
+                  >
+                    🚀 Demo Live
+                  </a>
                 </div>
               </div>
             </div>
@@ -1159,17 +1285,18 @@ function App() {
                   Arte Digital Photoshop
                 </h3>
                 <p style={{
-                  margin: '0 0 20px 0',
+                  margin: '0 0 15px 0',
                   color: isDarkTheme ? '#cbd5e0' : '#666',
                   fontSize: '14px',
                   lineHeight: '1.6'
                 }}>
-                  Criação de arte digital e manipulação de imagens utilizando técnicas avançadas do Photoshop.
+                  Criação de arte digital e manipulação de imagens utilizando técnicas avançadas do Photoshop. Inclui retoque fotográfico, montagens criativas e design gráfico.
                 </p>
                 <div style={{
                   display: 'flex',
                   gap: '8px',
-                  flexWrap: 'wrap'
+                  flexWrap: 'wrap',
+                  marginBottom: '20px'
                 }}>
                   {['Photoshop', 'Digital Art', 'Photo Editing'].map((tech, index) => (
                     <span key={index} style={{
@@ -1183,6 +1310,68 @@ function App() {
                       {tech}
                     </span>
                   ))}
+                </div>
+                <div style={{
+                  display: 'flex',
+                  gap: '10px',
+                  flexWrap: 'wrap'
+                }}>
+                  <a 
+                    href="https://behance.net/usuario/arte-digital" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    style={{
+                      backgroundColor: isDarkTheme ? '#667eea' : '#667eea',
+                      color: 'white',
+                      padding: '8px 16px',
+                      borderRadius: '8px',
+                      textDecoration: 'none',
+                      fontSize: '13px',
+                      fontWeight: '500',
+                      transition: 'all 0.3s ease',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '6px'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.backgroundColor = '#5a67d8';
+                      e.target.style.transform = 'translateY(-2px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.backgroundColor = '#667eea';
+                      e.target.style.transform = 'translateY(0)';
+                    }}
+                  >
+                    🎨 Ver Portfolio
+                  </a>
+                  <a 
+                    href="https://dribbble.com/usuario/arte-digital" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    style={{
+                      backgroundColor: isDarkTheme ? '#f093fb' : '#f093fb',
+                      color: 'white',
+                      padding: '8px 16px',
+                      borderRadius: '8px',
+                      textDecoration: 'none',
+                      fontSize: '13px',
+                      fontWeight: '500',
+                      transition: 'all 0.3s ease',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '6px'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.backgroundColor = '#ed64a6';
+                      e.target.style.transform = 'translateY(-2px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.backgroundColor = '#f093fb';
+                      e.target.style.transform = 'translateY(0)';
+                    }}
+                  >
+                    ✨ Galeria
+                  </a>
                 </div>
               </div>
             </div>
@@ -1257,17 +1446,18 @@ function App() {
                   Ilustração Vetorial
                 </h3>
                 <p style={{
-                  margin: '0 0 20px 0',
+                  margin: '0 0 15px 0',
                   color: isDarkTheme ? '#cbd5e0' : '#666',
                   fontSize: '14px',
                   lineHeight: '1.6'
                 }}>
-                  Criação de ilustrações vetoriais personalizadas com técnicas profissionais de design gráfico.
+                  Criação de ilustrações vetoriais personalizadas com técnicas profissionais de design gráfico. Inclui logos, ícones, personagens e elementos visuais para branding.
                 </p>
                 <div style={{
                   display: 'flex',
                   gap: '8px',
-                  flexWrap: 'wrap'
+                  flexWrap: 'wrap',
+                  marginBottom: '20px'
                 }}>
                   {['Illustrator', 'Vector Art', 'Branding'].map((tech, index) => (
                     <span key={index} style={{
@@ -1281,6 +1471,68 @@ function App() {
                       {tech}
                     </span>
                   ))}
+                </div>
+                <div style={{
+                  display: 'flex',
+                  gap: '10px',
+                  flexWrap: 'wrap'
+                }}>
+                  <a 
+                    href="https://behance.net/usuario/ilustracoes" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    style={{
+                      backgroundColor: isDarkTheme ? '#ff6b6b' : '#ff6b6b',
+                      color: 'white',
+                      padding: '8px 16px',
+                      borderRadius: '8px',
+                      textDecoration: 'none',
+                      fontSize: '13px',
+                      fontWeight: '500',
+                      transition: 'all 0.3s ease',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '6px'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.backgroundColor = '#e55656';
+                      e.target.style.transform = 'translateY(-2px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.backgroundColor = '#ff6b6b';
+                      e.target.style.transform = 'translateY(0)';
+                    }}
+                  >
+                    🖼️ Ver Trabalhos
+                  </a>
+                  <a 
+                    href="https://instagram.com/usuario.design" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    style={{
+                      backgroundColor: isDarkTheme ? '#4ecdc4' : '#4ecdc4',
+                      color: 'white',
+                      padding: '8px 16px',
+                      borderRadius: '8px',
+                      textDecoration: 'none',
+                      fontSize: '13px',
+                      fontWeight: '500',
+                      transition: 'all 0.3s ease',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '6px'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.backgroundColor = '#26d0ce';
+                      e.target.style.transform = 'translateY(-2px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.backgroundColor = '#4ecdc4';
+                      e.target.style.transform = 'translateY(0)';
+                    }}
+                  >
+                    📱 Instagram
+                  </a>
                 </div>
               </div>
             </div>
@@ -1355,17 +1607,18 @@ function App() {
                   Website Responsivo
                 </h3>
                 <p style={{
-                  margin: '0 0 20px 0',
+                  margin: '0 0 15px 0',
                   color: isDarkTheme ? '#cbd5e0' : '#666',
                   fontSize: '14px',
                   lineHeight: '1.6'
                 }}>
-                  Desenvolvimento de website responsivo com HTML5, CSS3 e JavaScript moderno para múltiplas plataformas.
+                  Desenvolvimento de website responsivo com HTML5, CSS3 e JavaScript moderno para múltiplas plataformas. Inclui animações, formulários interativos e otimização SEO.
                 </p>
                 <div style={{
                   display: 'flex',
                   gap: '8px',
-                  flexWrap: 'wrap'
+                  flexWrap: 'wrap',
+                  marginBottom: '20px'
                 }}>
                   {['HTML5', 'CSS3', 'JavaScript'].map((tech, index) => (
                     <span key={index} style={{
@@ -1379,6 +1632,68 @@ function App() {
                       {tech}
                     </span>
                   ))}
+                </div>
+                <div style={{
+                  display: 'flex',
+                  gap: '10px',
+                  flexWrap: 'wrap'
+                }}>
+                  <a 
+                    href="https://github.com/usuario/website-responsivo" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    style={{
+                      backgroundColor: isDarkTheme ? '#38b2ac' : '#38b2ac',
+                      color: 'white',
+                      padding: '8px 16px',
+                      borderRadius: '8px',
+                      textDecoration: 'none',
+                      fontSize: '13px',
+                      fontWeight: '500',
+                      transition: 'all 0.3s ease',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '6px'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.backgroundColor = '#319795';
+                      e.target.style.transform = 'translateY(-2px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.backgroundColor = '#38b2ac';
+                      e.target.style.transform = 'translateY(0)';
+                    }}
+                  >
+                    💻 Ver Código
+                  </a>
+                  <a 
+                    href="https://website-responsivo.netlify.app" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    style={{
+                      backgroundColor: isDarkTheme ? '#81e6d9' : '#81e6d9',
+                      color: 'white',
+                      padding: '8px 16px',
+                      borderRadius: '8px',
+                      textDecoration: 'none',
+                      fontSize: '13px',
+                      fontWeight: '500',
+                      transition: 'all 0.3s ease',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '6px'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.backgroundColor = '#4fd1c7';
+                      e.target.style.transform = 'translateY(-2px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.backgroundColor = '#81e6d9';
+                      e.target.style.transform = 'translateY(0)';
+                    }}
+                  >
+                    🌐 Site Online
+                  </a>
                 </div>
               </div>
             </div>
@@ -1453,17 +1768,18 @@ function App() {
                   Design Editorial
                 </h3>
                 <p style={{
-                  margin: '0 0 20px 0',
+                  margin: '0 0 15px 0',
                   color: isDarkTheme ? '#cbd5e0' : '#666',
                   fontSize: '14px',
                   lineHeight: '1.6'
                 }}>
-                  Criação de layouts editoriais profissionais para revistas, livros e materiais impressos usando InDesign.
+                  Criação de layouts editoriais profissionais para revistas, livros e materiais impressos usando InDesign. Inclui tipografia avançada, diagramação e preparação para impressão.
                 </p>
                 <div style={{
                   display: 'flex',
                   gap: '8px',
-                  flexWrap: 'wrap'
+                  flexWrap: 'wrap',
+                  marginBottom: '20px'
                 }}>
                   {['InDesign', 'Editorial', 'Typography'].map((tech, index) => (
                     <span key={index} style={{
@@ -1477,6 +1793,68 @@ function App() {
                       {tech}
                     </span>
                   ))}
+                </div>
+                <div style={{
+                  display: 'flex',
+                  gap: '10px',
+                  flexWrap: 'wrap'
+                }}>
+                  <a 
+                    href="https://issuu.com/usuario/editorial-design" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    style={{
+                      backgroundColor: isDarkTheme ? '#8b4513' : '#8b4513',
+                      color: 'white',
+                      padding: '8px 16px',
+                      borderRadius: '8px',
+                      textDecoration: 'none',
+                      fontSize: '13px',
+                      fontWeight: '500',
+                      transition: 'all 0.3s ease',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '6px'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.backgroundColor = '#a0522d';
+                      e.target.style.transform = 'translateY(-2px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.backgroundColor = '#8b4513';
+                      e.target.style.transform = 'translateY(0)';
+                    }}
+                  >
+                    📖 Ver Publicações
+                  </a>
+                  <a 
+                    href="https://behance.net/usuario/editorial" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    style={{
+                      backgroundColor: isDarkTheme ? '#cd853f' : '#cd853f',
+                      color: 'white',
+                      padding: '8px 16px',
+                      borderRadius: '8px',
+                      textDecoration: 'none',
+                      fontSize: '13px',
+                      fontWeight: '500',
+                      transition: 'all 0.3s ease',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '6px'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.backgroundColor = '#daa520';
+                      e.target.style.transform = 'translateY(-2px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.backgroundColor = '#cd853f';
+                      e.target.style.transform = 'translateY(0)';
+                    }}
+                  >
+                    📚 Portfolio
+                  </a>
                 </div>
               </div>
             </div>
