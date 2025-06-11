@@ -889,11 +889,11 @@ function App() {
 
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
-            gap: '30px',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+            gap: '25px',
             marginTop: '40px'
           }}>
-            {/* Projeto 1 */}
+            {/* Projeto 1 - Design UI/UX */}
             <div style={{
               backgroundColor: isDarkTheme ? '#1a202c' : 'white',
               borderRadius: '20px',
@@ -917,15 +917,39 @@ function App() {
                 : '0 15px 35px rgba(0, 0, 0, 0.1)';
             }}>
               <div style={{
-                height: '200px',
-                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'white',
-                fontSize: '48px'
+                height: '220px',
+                backgroundImage: 'url(./images/xd.png)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                position: 'relative',
+                overflow: 'hidden'
               }}>
-                🎨
+                <div style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  opacity: 0,
+                  transition: 'opacity 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.opacity = '1';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.opacity = '0';
+                }}>
+                  <span style={{
+                    color: 'white',
+                    fontSize: '18px',
+                    fontWeight: '600',
+                    textAlign: 'center'
+                  }}>Ver Projeto</span>
+                </div>
               </div>
               <div style={{
                 padding: '25px'
@@ -936,7 +960,7 @@ function App() {
                   fontSize: '22px',
                   fontWeight: '600'
                 }}>
-                  Design de Interface
+                  Interface Adobe XD
                 </h3>
                 <p style={{
                   margin: '0 0 20px 0',
@@ -944,14 +968,14 @@ function App() {
                   fontSize: '14px',
                   lineHeight: '1.6'
                 }}>
-                  Criação de interfaces modernas e responsivas utilizando as melhores práticas de UX/UI Design.
+                  Design de interface moderna e intuitiva criada no Adobe XD com foco na experiência do usuário.
                 </p>
                 <div style={{
                   display: 'flex',
                   gap: '8px',
                   flexWrap: 'wrap'
                 }}>
-                  {['Figma', 'Adobe XD', 'Photoshop'].map((tech, index) => (
+                  {['Adobe XD', 'UI/UX', 'Prototyping'].map((tech, index) => (
                     <span key={index} style={{
                       backgroundColor: isDarkTheme ? '#2d3748' : '#f1f5f9',
                       color: isDarkTheme ? '#e2e8f0' : '#475569',
@@ -967,7 +991,7 @@ function App() {
               </div>
             </div>
 
-            {/* Projeto 2 */}
+            {/* Projeto 2 - Desenvolvimento React */}
             <div style={{
               backgroundColor: isDarkTheme ? '#1a202c' : 'white',
               borderRadius: '20px',
@@ -991,15 +1015,39 @@ function App() {
                 : '0 15px 35px rgba(0, 0, 0, 0.1)';
             }}>
               <div style={{
-                height: '200px',
-                background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'white',
-                fontSize: '48px'
+                height: '220px',
+                backgroundImage: 'url(./images/react.png)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                position: 'relative',
+                overflow: 'hidden'
               }}>
-                💻
+                <div style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  background: 'linear-gradient(135deg, rgba(79, 172, 254, 0.8) 0%, rgba(0, 242, 254, 0.8) 100%)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  opacity: 0,
+                  transition: 'opacity 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.opacity = '1';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.opacity = '0';
+                }}>
+                  <span style={{
+                    color: 'white',
+                    fontSize: '18px',
+                    fontWeight: '600',
+                    textAlign: 'center'
+                  }}>Ver Projeto</span>
+                </div>
               </div>
               <div style={{
                 padding: '25px'
@@ -1010,7 +1058,7 @@ function App() {
                   fontSize: '22px',
                   fontWeight: '600'
                 }}>
-                  Desenvolvimento Web
+                  Aplicação React
                 </h3>
                 <p style={{
                   margin: '0 0 20px 0',
@@ -1018,14 +1066,14 @@ function App() {
                   fontSize: '14px',
                   lineHeight: '1.6'
                 }}>
-                  Desenvolvimento de aplicações web modernas e responsivas com foco na experiência do usuário.
+                  Desenvolvimento de aplicação web moderna utilizando React com componentes reutilizáveis e responsivos.
                 </p>
                 <div style={{
                   display: 'flex',
                   gap: '8px',
                   flexWrap: 'wrap'
                 }}>
-                  {['React', 'JavaScript', 'CSS'].map((tech, index) => (
+                  {['React', 'JavaScript', 'CSS3'].map((tech, index) => (
                     <span key={index} style={{
                       backgroundColor: isDarkTheme ? '#2d3748' : '#f1f5f9',
                       color: isDarkTheme ? '#e2e8f0' : '#475569',
@@ -1041,7 +1089,7 @@ function App() {
               </div>
             </div>
 
-            {/* Projeto 3 */}
+            {/* Projeto 3 - Design Photoshop */}
             <div style={{
               backgroundColor: isDarkTheme ? '#1a202c' : 'white',
               borderRadius: '20px',
@@ -1065,15 +1113,39 @@ function App() {
                 : '0 15px 35px rgba(0, 0, 0, 0.1)';
             }}>
               <div style={{
-                height: '200px',
-                background: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'white',
-                fontSize: '48px'
+                height: '220px',
+                backgroundImage: 'url(./images/photoshop.png)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                position: 'relative',
+                overflow: 'hidden'
               }}>
-                📱
+                <div style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  background: 'linear-gradient(135deg, rgba(250, 112, 154, 0.8) 0%, rgba(254, 225, 64, 0.8) 100%)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  opacity: 0,
+                  transition: 'opacity 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.opacity = '1';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.opacity = '0';
+                }}>
+                  <span style={{
+                    color: 'white',
+                    fontSize: '18px',
+                    fontWeight: '600',
+                    textAlign: 'center'
+                  }}>Ver Projeto</span>
+                </div>
               </div>
               <div style={{
                 padding: '25px'
@@ -1084,7 +1156,7 @@ function App() {
                   fontSize: '22px',
                   fontWeight: '600'
                 }}>
-                  Design Mobile
+                  Arte Digital Photoshop
                 </h3>
                 <p style={{
                   margin: '0 0 20px 0',
@@ -1092,14 +1164,308 @@ function App() {
                   fontSize: '14px',
                   lineHeight: '1.6'
                 }}>
-                  Criação de interfaces mobile intuitivas e otimizadas para diferentes dispositivos e plataformas.
+                  Criação de arte digital e manipulação de imagens utilizando técnicas avançadas do Photoshop.
                 </p>
                 <div style={{
                   display: 'flex',
                   gap: '8px',
                   flexWrap: 'wrap'
                 }}>
-                  {['Flutter', 'React Native', 'Swift'].map((tech, index) => (
+                  {['Photoshop', 'Digital Art', 'Photo Editing'].map((tech, index) => (
+                    <span key={index} style={{
+                      backgroundColor: isDarkTheme ? '#2d3748' : '#f1f5f9',
+                      color: isDarkTheme ? '#e2e8f0' : '#475569',
+                      padding: '4px 12px',
+                      borderRadius: '12px',
+                      fontSize: '12px',
+                      fontWeight: '500'
+                    }}>
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Projeto 4 - Ilustração */}
+            <div style={{
+              backgroundColor: isDarkTheme ? '#1a202c' : 'white',
+              borderRadius: '20px',
+              overflow: 'hidden',
+              boxShadow: isDarkTheme 
+                ? '0 15px 35px rgba(0, 0, 0, 0.3)' 
+                : '0 15px 35px rgba(0, 0, 0, 0.1)',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-10px)';
+              e.currentTarget.style.boxShadow = isDarkTheme 
+                ? '0 25px 50px rgba(0, 0, 0, 0.4)' 
+                : '0 25px 50px rgba(0, 0, 0, 0.15)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = isDarkTheme 
+                ? '0 15px 35px rgba(0, 0, 0, 0.3)' 
+                : '0 15px 35px rgba(0, 0, 0, 0.1)';
+            }}>
+              <div style={{
+                height: '220px',
+                backgroundImage: 'url(./images/illustrador.png)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                position: 'relative',
+                overflow: 'hidden'
+              }}>
+                <div style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  background: 'linear-gradient(135deg, rgba(255, 94, 77, 0.8) 0%, rgba(255, 154, 0, 0.8) 100%)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  opacity: 0,
+                  transition: 'opacity 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.opacity = '1';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.opacity = '0';
+                }}>
+                  <span style={{
+                    color: 'white',
+                    fontSize: '18px',
+                    fontWeight: '600',
+                    textAlign: 'center'
+                  }}>Ver Projeto</span>
+                </div>
+              </div>
+              <div style={{
+                padding: '25px'
+              }}>
+                <h3 style={{
+                  margin: '0 0 15px 0',
+                  color: isDarkTheme ? '#e2e8f0' : '#2d3748',
+                  fontSize: '22px',
+                  fontWeight: '600'
+                }}>
+                  Ilustração Vetorial
+                </h3>
+                <p style={{
+                  margin: '0 0 20px 0',
+                  color: isDarkTheme ? '#cbd5e0' : '#666',
+                  fontSize: '14px',
+                  lineHeight: '1.6'
+                }}>
+                  Criação de ilustrações vetoriais personalizadas com técnicas profissionais de design gráfico.
+                </p>
+                <div style={{
+                  display: 'flex',
+                  gap: '8px',
+                  flexWrap: 'wrap'
+                }}>
+                  {['Illustrator', 'Vector Art', 'Branding'].map((tech, index) => (
+                    <span key={index} style={{
+                      backgroundColor: isDarkTheme ? '#2d3748' : '#f1f5f9',
+                      color: isDarkTheme ? '#e2e8f0' : '#475569',
+                      padding: '4px 12px',
+                      borderRadius: '12px',
+                      fontSize: '12px',
+                      fontWeight: '500'
+                    }}>
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Projeto 5 - Web Development */}
+            <div style={{
+              backgroundColor: isDarkTheme ? '#1a202c' : 'white',
+              borderRadius: '20px',
+              overflow: 'hidden',
+              boxShadow: isDarkTheme 
+                ? '0 15px 35px rgba(0, 0, 0, 0.3)' 
+                : '0 15px 35px rgba(0, 0, 0, 0.1)',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-10px)';
+              e.currentTarget.style.boxShadow = isDarkTheme 
+                ? '0 25px 50px rgba(0, 0, 0, 0.4)' 
+                : '0 25px 50px rgba(0, 0, 0, 0.15)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = isDarkTheme 
+                ? '0 15px 35px rgba(0, 0, 0, 0.3)' 
+                : '0 15px 35px rgba(0, 0, 0, 0.1)';
+            }}>
+              <div style={{
+                height: '220px',
+                backgroundImage: 'url(./images/html.png)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                position: 'relative',
+                overflow: 'hidden'
+              }}>
+                <div style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  background: 'linear-gradient(135deg, rgba(56, 178, 172, 0.8) 0%, rgba(129, 230, 217, 0.8) 100%)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  opacity: 0,
+                  transition: 'opacity 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.opacity = '1';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.opacity = '0';
+                }}>
+                  <span style={{
+                    color: 'white',
+                    fontSize: '18px',
+                    fontWeight: '600',
+                    textAlign: 'center'
+                  }}>Ver Projeto</span>
+                </div>
+              </div>
+              <div style={{
+                padding: '25px'
+              }}>
+                <h3 style={{
+                  margin: '0 0 15px 0',
+                  color: isDarkTheme ? '#e2e8f0' : '#2d3748',
+                  fontSize: '22px',
+                  fontWeight: '600'
+                }}>
+                  Website Responsivo
+                </h3>
+                <p style={{
+                  margin: '0 0 20px 0',
+                  color: isDarkTheme ? '#cbd5e0' : '#666',
+                  fontSize: '14px',
+                  lineHeight: '1.6'
+                }}>
+                  Desenvolvimento de website responsivo com HTML5, CSS3 e JavaScript moderno para múltiplas plataformas.
+                </p>
+                <div style={{
+                  display: 'flex',
+                  gap: '8px',
+                  flexWrap: 'wrap'
+                }}>
+                  {['HTML5', 'CSS3', 'JavaScript'].map((tech, index) => (
+                    <span key={index} style={{
+                      backgroundColor: isDarkTheme ? '#2d3748' : '#f1f5f9',
+                      color: isDarkTheme ? '#e2e8f0' : '#475569',
+                      padding: '4px 12px',
+                      borderRadius: '12px',
+                      fontSize: '12px',
+                      fontWeight: '500'
+                    }}>
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Projeto 6 - Editorial Design */}
+            <div style={{
+              backgroundColor: isDarkTheme ? '#1a202c' : 'white',
+              borderRadius: '20px',
+              overflow: 'hidden',
+              boxShadow: isDarkTheme 
+                ? '0 15px 35px rgba(0, 0, 0, 0.3)' 
+                : '0 15px 35px rgba(0, 0, 0, 0.1)',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-10px)';
+              e.currentTarget.style.boxShadow = isDarkTheme 
+                ? '0 25px 50px rgba(0, 0, 0, 0.4)' 
+                : '0 25px 50px rgba(0, 0, 0, 0.15)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = isDarkTheme 
+                ? '0 15px 35px rgba(0, 0, 0, 0.3)' 
+                : '0 15px 35px rgba(0, 0, 0, 0.1)';
+            }}>
+              <div style={{
+                height: '220px',
+                backgroundImage: 'url(./images/indesign.png)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                position: 'relative',
+                overflow: 'hidden'
+              }}>
+                <div style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  background: 'linear-gradient(135deg, rgba(139, 69, 19, 0.8) 0%, rgba(160, 82, 45, 0.8) 100%)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  opacity: 0,
+                  transition: 'opacity 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.opacity = '1';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.opacity = '0';
+                }}>
+                  <span style={{
+                    color: 'white',
+                    fontSize: '18px',
+                    fontWeight: '600',
+                    textAlign: 'center'
+                  }}>Ver Projeto</span>
+                </div>
+              </div>
+              <div style={{
+                padding: '25px'
+              }}>
+                <h3 style={{
+                  margin: '0 0 15px 0',
+                  color: isDarkTheme ? '#e2e8f0' : '#2d3748',
+                  fontSize: '22px',
+                  fontWeight: '600'
+                }}>
+                  Design Editorial
+                </h3>
+                <p style={{
+                  margin: '0 0 20px 0',
+                  color: isDarkTheme ? '#cbd5e0' : '#666',
+                  fontSize: '14px',
+                  lineHeight: '1.6'
+                }}>
+                  Criação de layouts editoriais profissionais para revistas, livros e materiais impressos usando InDesign.
+                </p>
+                <div style={{
+                  display: 'flex',
+                  gap: '8px',
+                  flexWrap: 'wrap'
+                }}>
+                  {['InDesign', 'Editorial', 'Typography'].map((tech, index) => (
                     <span key={index} style={{
                       backgroundColor: isDarkTheme ? '#2d3748' : '#f1f5f9',
                       color: isDarkTheme ? '#e2e8f0' : '#475569',
