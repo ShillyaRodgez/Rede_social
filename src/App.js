@@ -303,7 +303,17 @@ function App() {
                 padding: '5px 12px',
                 cursor: 'pointer',
                 fontSize: '12px',
-                fontWeight: 'bold'
+                fontWeight: 'bold',
+                transition: 'all 0.3s ease',
+                animation: 'bounceIn 0.5s ease-out'
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.backgroundColor = '#218838';
+                e.target.style.transform = 'scale(1.05)';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.backgroundColor = '#28a745';
+                e.target.style.transform = 'scale(1)';
               }}
             >
               ✓ Confirmar
@@ -318,7 +328,17 @@ function App() {
                 padding: '5px 12px',
                 cursor: 'pointer',
                 fontSize: '12px',
-                fontWeight: 'bold'
+                fontWeight: 'bold',
+                transition: 'all 0.3s ease',
+                animation: 'bounceIn 0.5s ease-out 0.1s'
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.backgroundColor = '#c82333';
+                e.target.style.transform = 'scale(1.05)';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.backgroundColor = '#dc3545';
+                e.target.style.transform = 'scale(1)';
               }}
             >
               ✕ Cancelar
@@ -698,6 +718,8 @@ function App() {
                   cursor: 'pointer',
                   fontSize: '12px',
                   display: 'flex',
+                  transition: 'all 0.3s ease',
+                  animation: 'fadeIn 0.3s ease-out',
                   alignItems: 'center',
                   justifyContent: 'center'
                 }}
@@ -758,7 +780,17 @@ function App() {
                        display: 'inline-flex',
                        alignItems: 'center',
                        justifyContent: 'center',
-                       verticalAlign: 'middle'
+                       verticalAlign: 'middle',
+                       transition: 'all 0.3s ease',
+                       animation: 'fadeIn 0.3s ease-out'
+                     }}
+                     onMouseEnter={(e) => {
+                       e.target.style.backgroundColor = 'rgba(0, 123, 255, 0.8)';
+                       e.target.style.transform = 'scale(1.1)';
+                     }}
+                     onMouseLeave={(e) => {
+                       e.target.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
+                       e.target.style.transform = 'scale(1)';
                      }}
                    >
                      ✏️
@@ -2796,8 +2828,12 @@ function App() {
                 maxWidth: '100%',
                 maxHeight: '80vh',
                 borderRadius: '8px',
-                objectFit: 'contain'
+                objectFit: 'contain',
+                animation: 'zoomIn 0.4s ease-out 0.1s both',
+                transition: 'transform 0.3s ease'
               }}
+              onMouseEnter={(e) => e.target.style.transform = 'scale(1.02)'}
+              onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
             />
             <button 
               onClick={closeProfilePreview}
@@ -2815,7 +2851,17 @@ function App() {
                 fontSize: '18px',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center'
+                justifyContent: 'center',
+                animation: 'rotateIn 0.5s ease-out 0.2s both',
+                transition: 'all 0.3s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.backgroundColor = 'rgba(255, 0, 0, 0.8)';
+                e.target.style.transform = 'scale(1.1) rotate(90deg)';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
+                e.target.style.transform = 'scale(1) rotate(0deg)';
               }}
             >
               ✕
