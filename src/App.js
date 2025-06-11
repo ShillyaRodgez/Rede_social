@@ -2313,6 +2313,454 @@ function App() {
           </div>
         </div>
       </div>
+
+      {/* Formação Acadêmica */}
+      <div style={{
+        padding: '80px 20px',
+        background: isDarkTheme 
+          ? 'linear-gradient(135deg, #2d3748 0%, #1a202c 100%)' 
+          : 'linear-gradient(135deg, #edf2f7 0%, #f7fafc 100%)',
+        minHeight: '100vh'
+      }}>
+        <div style={{
+          maxWidth: '1200px',
+          margin: '0 auto'
+        }}>
+          <div style={{
+            textAlign: 'center',
+            marginBottom: '60px'
+          }}>
+            <h2 style={{
+              fontSize: '48px',
+              fontWeight: '700',
+              background: 'linear-gradient(135deg, #764ba2 0%, #667eea 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              margin: '0 0 20px 0',
+              textAlign: 'center'
+            }}>
+              Formação Acadêmica
+            </h2>
+            <p style={{
+              fontSize: '18px',
+              color: isDarkTheme ? '#a0aec0' : '#718096',
+              maxWidth: '600px',
+              margin: '0 auto',
+              lineHeight: '1.6'
+            }}>
+              Minha trajetória educacional e certificações que fundamentam minha expertise
+            </p>
+          </div>
+
+          {/* Cards de Formação */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+            gap: '30px',
+            maxWidth: '1000px',
+            margin: '0 auto'
+          }}>
+            {/* Graduação */}
+            <div style={{
+              backgroundColor: isDarkTheme ? '#1a202c' : 'white',
+              padding: '30px',
+              borderRadius: '20px',
+              boxShadow: isDarkTheme 
+                ? '0 15px 40px rgba(0, 0, 0, 0.4)' 
+                : '0 15px 40px rgba(0, 0, 0, 0.1)',
+              border: isDarkTheme ? '1px solid #2d3748' : '1px solid #e2e8f0',
+              transition: 'all 0.3s ease',
+              position: 'relative',
+              overflow: 'hidden'
+            }}>
+              {/* Ícone de graduação */}
+              <div style={{
+                position: 'absolute',
+                top: '-20px',
+                right: '-20px',
+                width: '80px',
+                height: '80px',
+                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                borderRadius: '50%',
+                opacity: '0.1',
+                transform: 'rotate(15deg)'
+              }}></div>
+              
+              <div style={{
+                display: 'inline-block',
+                backgroundColor: '#667eea',
+                color: 'white',
+                padding: '6px 15px',
+                borderRadius: '25px',
+                fontSize: '12px',
+                fontWeight: '600',
+                marginBottom: '20px'
+              }}>
+                2018 - 2022
+              </div>
+              
+              <h3 style={{
+                fontSize: '24px',
+                fontWeight: '700',
+                color: isDarkTheme ? '#e2e8f0' : '#2d3748',
+                margin: '0 0 10px 0',
+                lineHeight: '1.3'
+              }}>
+                Bacharelado em Ciência da Computação
+              </h3>
+              
+              <h4 style={{
+                fontSize: '18px',
+                fontWeight: '500',
+                color: '#667eea',
+                margin: '0 0 20px 0'
+              }}>
+                Universidade Federal de Tecnologia
+              </h4>
+              
+              <p style={{
+                fontSize: '15px',
+                color: isDarkTheme ? '#cbd5e0' : '#666',
+                lineHeight: '1.6',
+                margin: '0 0 20px 0'
+              }}>
+                Formação sólida em algoritmos, estruturas de dados, engenharia de software e desenvolvimento de sistemas. Projeto final focado em aplicações web modernas.
+              </p>
+              
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '10px',
+                marginBottom: '15px'
+              }}>
+                <span style={{
+                  fontSize: '14px',
+                  fontWeight: '600',
+                  color: isDarkTheme ? '#a0aec0' : '#718096'
+                }}>
+                  CRA:
+                </span>
+                <span style={{
+                  fontSize: '16px',
+                  fontWeight: '700',
+                  color: '#48bb78'
+                }}>
+                  8.5/10
+                </span>
+              </div>
+              
+              <div style={{
+                display: 'flex',
+                gap: '8px',
+                flexWrap: 'wrap'
+              }}>
+                {['Algoritmos', 'Estruturas de Dados', 'Engenharia de Software', 'Banco de Dados'].map((subject, index) => (
+                  <span key={index} style={{
+                    backgroundColor: isDarkTheme ? '#2d3748' : '#f1f5f9',
+                    color: isDarkTheme ? '#e2e8f0' : '#475569',
+                    padding: '5px 12px',
+                    borderRadius: '12px',
+                    fontSize: '12px',
+                    fontWeight: '500'
+                  }}>
+                    {subject}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Pós-graduação */}
+            <div style={{
+              backgroundColor: isDarkTheme ? '#1a202c' : 'white',
+              padding: '30px',
+              borderRadius: '20px',
+              boxShadow: isDarkTheme 
+                ? '0 15px 40px rgba(0, 0, 0, 0.4)' 
+                : '0 15px 40px rgba(0, 0, 0, 0.1)',
+              border: isDarkTheme ? '1px solid #2d3748' : '1px solid #e2e8f0',
+              transition: 'all 0.3s ease',
+              position: 'relative',
+              overflow: 'hidden'
+            }}>
+              {/* Ícone de pós-graduação */}
+              <div style={{
+                position: 'absolute',
+                top: '-20px',
+                right: '-20px',
+                width: '80px',
+                height: '80px',
+                background: 'linear-gradient(135deg, #4299e1 0%, #3182ce 100%)',
+                borderRadius: '50%',
+                opacity: '0.1',
+                transform: 'rotate(-15deg)'
+              }}></div>
+              
+              <div style={{
+                display: 'inline-block',
+                backgroundColor: '#4299e1',
+                color: 'white',
+                padding: '6px 15px',
+                borderRadius: '25px',
+                fontSize: '12px',
+                fontWeight: '600',
+                marginBottom: '20px'
+              }}>
+                2023 - 2024
+              </div>
+              
+              <h3 style={{
+                fontSize: '24px',
+                fontWeight: '700',
+                color: isDarkTheme ? '#e2e8f0' : '#2d3748',
+                margin: '0 0 10px 0',
+                lineHeight: '1.3'
+              }}>
+                Especialização em Desenvolvimento Full Stack
+              </h3>
+              
+              <h4 style={{
+                fontSize: '18px',
+                fontWeight: '500',
+                color: '#4299e1',
+                margin: '0 0 20px 0'
+              }}>
+                Instituto de Tecnologia Avançada
+              </h4>
+              
+              <p style={{
+                fontSize: '15px',
+                color: isDarkTheme ? '#cbd5e0' : '#666',
+                lineHeight: '1.6',
+                margin: '0 0 20px 0'
+              }}>
+                Especialização focada em tecnologias modernas de desenvolvimento web, arquitetura de microsserviços e metodologias ágeis.
+              </p>
+              
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '10px',
+                marginBottom: '15px'
+              }}>
+                <span style={{
+                  fontSize: '14px',
+                  fontWeight: '600',
+                  color: isDarkTheme ? '#a0aec0' : '#718096'
+                }}>
+                  Status:
+                </span>
+                <span style={{
+                  fontSize: '14px',
+                  fontWeight: '600',
+                  color: '#48bb78',
+                  backgroundColor: isDarkTheme ? '#1a202c' : '#f0fff4',
+                  padding: '3px 10px',
+                  borderRadius: '10px',
+                  border: '1px solid #48bb78'
+                }}>
+                  Concluído
+                </span>
+              </div>
+              
+              <div style={{
+                display: 'flex',
+                gap: '8px',
+                flexWrap: 'wrap'
+              }}>
+                {['React', 'Node.js', 'MongoDB', 'Docker', 'AWS'].map((tech, index) => (
+                  <span key={index} style={{
+                    backgroundColor: isDarkTheme ? '#2d3748' : '#f1f5f9',
+                    color: isDarkTheme ? '#e2e8f0' : '#475569',
+                    padding: '5px 12px',
+                    borderRadius: '12px',
+                    fontSize: '12px',
+                    fontWeight: '500'
+                  }}>
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Certificações */}
+          <div style={{
+            marginTop: '60px'
+          }}>
+            <h3 style={{
+              fontSize: '32px',
+              fontWeight: '600',
+              color: isDarkTheme ? '#e2e8f0' : '#2d3748',
+              textAlign: 'center',
+              marginBottom: '40px'
+            }}>
+              Certificações
+            </h3>
+            
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gap: '20px',
+              maxWidth: '900px',
+              margin: '0 auto'
+            }}>
+              {/* Certificação 1 */}
+              <div style={{
+                backgroundColor: isDarkTheme ? '#1a202c' : 'white',
+                padding: '25px',
+                borderRadius: '15px',
+                boxShadow: isDarkTheme 
+                  ? '0 10px 30px rgba(0, 0, 0, 0.3)' 
+                  : '0 10px 30px rgba(0, 0, 0, 0.1)',
+                border: isDarkTheme ? '1px solid #2d3748' : '1px solid #e2e8f0',
+                transition: 'all 0.3s ease',
+                textAlign: 'center'
+              }}>
+                <div style={{
+                  width: '60px',
+                  height: '60px',
+                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                  borderRadius: '50%',
+                  margin: '0 auto 15px auto',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '24px',
+                  color: 'white',
+                  fontWeight: 'bold'
+                }}>
+                  AWS
+                </div>
+                <h4 style={{
+                  fontSize: '16px',
+                  fontWeight: '600',
+                  color: isDarkTheme ? '#e2e8f0' : '#2d3748',
+                  margin: '0 0 8px 0'
+                }}>
+                  AWS Certified Developer
+                </h4>
+                <p style={{
+                  fontSize: '13px',
+                  color: isDarkTheme ? '#a0aec0' : '#718096',
+                  margin: '0 0 10px 0'
+                }}>
+                  Amazon Web Services
+                </p>
+                <span style={{
+                  fontSize: '12px',
+                  color: '#48bb78',
+                  fontWeight: '500'
+                }}>
+                  2023
+                </span>
+              </div>
+
+              {/* Certificação 2 */}
+              <div style={{
+                backgroundColor: isDarkTheme ? '#1a202c' : 'white',
+                padding: '25px',
+                borderRadius: '15px',
+                boxShadow: isDarkTheme 
+                  ? '0 10px 30px rgba(0, 0, 0, 0.3)' 
+                  : '0 10px 30px rgba(0, 0, 0, 0.1)',
+                border: isDarkTheme ? '1px solid #2d3748' : '1px solid #e2e8f0',
+                transition: 'all 0.3s ease',
+                textAlign: 'center'
+              }}>
+                <div style={{
+                  width: '60px',
+                  height: '60px',
+                  background: 'linear-gradient(135deg, #4299e1 0%, #3182ce 100%)',
+                  borderRadius: '50%',
+                  margin: '0 auto 15px auto',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '20px',
+                  color: 'white',
+                  fontWeight: 'bold'
+                }}>
+                  ⚛️
+                </div>
+                <h4 style={{
+                  fontSize: '16px',
+                  fontWeight: '600',
+                  color: isDarkTheme ? '#e2e8f0' : '#2d3748',
+                  margin: '0 0 8px 0'
+                }}>
+                  React Developer Certification
+                </h4>
+                <p style={{
+                  fontSize: '13px',
+                  color: isDarkTheme ? '#a0aec0' : '#718096',
+                  margin: '0 0 10px 0'
+                }}>
+                  Meta (Facebook)
+                </p>
+                <span style={{
+                  fontSize: '12px',
+                  color: '#48bb78',
+                  fontWeight: '500'
+                }}>
+                  2022
+                </span>
+              </div>
+
+              {/* Certificação 3 */}
+              <div style={{
+                backgroundColor: isDarkTheme ? '#1a202c' : 'white',
+                padding: '25px',
+                borderRadius: '15px',
+                boxShadow: isDarkTheme 
+                  ? '0 10px 30px rgba(0, 0, 0, 0.3)' 
+                  : '0 10px 30px rgba(0, 0, 0, 0.1)',
+                border: isDarkTheme ? '1px solid #2d3748' : '1px solid #e2e8f0',
+                transition: 'all 0.3s ease',
+                textAlign: 'center'
+              }}>
+                <div style={{
+                  width: '60px',
+                  height: '60px',
+                  background: 'linear-gradient(135deg, #48bb78 0%, #38a169 100%)',
+                  borderRadius: '50%',
+                  margin: '0 auto 15px auto',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '20px',
+                  color: 'white',
+                  fontWeight: 'bold'
+                }}>
+                  🎨
+                </div>
+                <h4 style={{
+                  fontSize: '16px',
+                  fontWeight: '600',
+                  color: isDarkTheme ? '#e2e8f0' : '#2d3748',
+                  margin: '0 0 8px 0'
+                }}>
+                  UX/UI Design Professional
+                </h4>
+                <p style={{
+                  fontSize: '13px',
+                  color: isDarkTheme ? '#a0aec0' : '#718096',
+                  margin: '0 0 10px 0'
+                }}>
+                  Google Design
+                </p>
+                <span style={{
+                  fontSize: '12px',
+                  color: '#48bb78',
+                  fontWeight: '500'
+                }}>
+                  2021
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       
       {/* Modal de preview da foto de perfil */}
        {showProfilePreview && (
