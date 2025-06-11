@@ -24,6 +24,68 @@ function App() {
           transform: scale(1);
         }
       }
+      
+      /* Responsividade Mobile */
+      @media (max-width: 768px) {
+        .mobile-responsive {
+          padding: 10px !important;
+          margin: 10px !important;
+        }
+        
+        .mobile-text-small {
+          font-size: 14px !important;
+        }
+        
+        .mobile-text-medium {
+          font-size: 18px !important;
+        }
+        
+        .mobile-text-large {
+          font-size: 24px !important;
+        }
+        
+        .mobile-grid {
+          grid-template-columns: 1fr !important;
+          gap: 15px !important;
+        }
+        
+        .mobile-hide {
+          display: none !important;
+        }
+        
+        .mobile-full-width {
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+        
+        .mobile-center {
+          text-align: center !important;
+        }
+        
+        .mobile-padding {
+          padding: 15px !important;
+        }
+        
+        .mobile-margin {
+          margin: 10px 0 !important;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .mobile-small-responsive {
+          padding: 8px !important;
+          margin: 8px !important;
+        }
+        
+        .mobile-small-text {
+          font-size: 12px !important;
+        }
+        
+        .mobile-small-grid {
+          grid-template-columns: 1fr !important;
+          gap: 10px !important;
+        }
+      }
     `;
     document.head.appendChild(style);
     
@@ -258,10 +320,22 @@ function App() {
     }
   }, [isHoveringCover, isHoveringProfilePic]);
 
+  // Listener para redimensionamento da janela (responsividade dinâmica)
+  React.useEffect(() => {
+    const handleResize = () => {
+      // Força re-render quando a janela é redimensionada
+      setUserName(prev => prev);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div>
       {/* Capa do perfil */}
       <div 
+        className="mobile-full-width"
         onMouseEnter={() => setIsHoveringCover(true)}
         onMouseLeave={() => setIsHoveringCover(false)}
         onMouseDown={handleMouseDown}
@@ -269,7 +343,7 @@ function App() {
           backgroundImage: `url(${coverImage})`,
           backgroundSize: 'cover',
           backgroundPosition: isManualAdjustMode ? `calc(${coverPosition.includes('%') ? coverPosition.split(' ')[0] : '50%'} + ${coverOffset.x}px) calc(${coverPosition.includes('%') ? coverPosition.split(' ')[1] || '50%' : '50%'} + ${coverOffset.y}px)` : coverPosition,
-          height: '300px',
+          height: window.innerWidth <= 768 ? '200px' : '300px',
           width: '100%',
           position: 'relative',
           cursor: isManualAdjustMode ? (isDragging ? 'grabbing' : 'grab') : 'default',
@@ -612,22 +686,22 @@ function App() {
         onClick={toggleTheme}
         style={{
           position: 'fixed',
-          top: '20px',
-          right: '20px',
+          top: window.innerWidth <= 768 ? '10px' : '20px',
+          right: window.innerWidth <= 768 ? '10px' : '20px',
           zIndex: 1000,
           backgroundColor: isDarkTheme ? '#4a5568' : '#ffffff',
           color: isDarkTheme ? '#ffffff' : '#2d3748',
           border: 'none',
           borderRadius: '50px',
-          padding: '12px 20px',
+          padding: window.innerWidth <= 768 ? '8px 12px' : '12px 20px',
           cursor: 'pointer',
-          fontSize: '14px',
+          fontSize: window.innerWidth <= 768 ? '12px' : '14px',
           fontWeight: '500',
           boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
           transition: 'all 0.3s ease',
           display: 'flex',
           alignItems: 'center',
-          gap: '8px'
+          gap: window.innerWidth <= 768 ? '4px' : '8px'
         }}
         onMouseEnter={(e) => {
           e.target.style.transform = 'translateY(-2px)';
@@ -643,24 +717,26 @@ function App() {
       </button>
 
       {/* Conteúdo do perfil */}
-      <div style={{
-        padding: '60px 20px 20px',
+      <div className="mobile-container" style={{
+        padding: window.innerWidth <= 768 ? '20px 10px 10px' : '60px 20px 20px',
         background: isDarkTheme 
           ? 'linear-gradient(135deg, #2d3748 0%, #4a5568 100%)' 
           : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
         minHeight: '100vh',
         display: 'flex',
-        gap: '40px',
+        flexDirection: window.innerWidth <= 768 ? 'column' : 'row',
+        gap: window.innerWidth <= 768 ? '20px' : '40px',
         alignItems: 'flex-start'
       }}>
         {/* Coluna esquerda - Informações do perfil */}
-        <div style={{
+        <div className="profile-info-container" style={{
           flex: '1',
-          minWidth: '300px',
+          width: window.innerWidth <= 768 ? '100%' : 'auto',
+          minWidth: window.innerWidth <= 768 ? '100%' : '300px',
           backgroundColor: isDarkTheme ? '#1a202c' : 'white',
           color: isDarkTheme ? '#e2e8f0' : '#2d3748',
           borderRadius: '20px',
-          padding: '30px',
+          padding: window.innerWidth <= 768 ? '20px' : '30px',
           boxShadow: isDarkTheme 
             ? '0 10px 30px rgba(0, 0, 0, 0.3)' 
             : '0 10px 30px rgba(0, 0, 0, 0.1)',
@@ -899,11 +975,11 @@ function App() {
         }}>
           <h2 style={{
             textAlign: 'center',
-            marginBottom: '50px',
+            marginBottom: window.innerWidth <= 768 ? '30px' : '50px',
             color: isDarkTheme ? '#e2e8f0' : '#2d3748',
             fontFamily: '"Poppins", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif',
             fontWeight: '600',
-            fontSize: '36px',
+            fontSize: window.innerWidth <= 768 ? '28px' : '36px',
             position: 'relative'
           }}>
             Meus Projetos
@@ -919,11 +995,11 @@ function App() {
             }}></div>
           </h2>
 
-          <div style={{
+          <div className="projects-grid" style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap: '25px',
-            marginTop: '40px'
+            gridTemplateColumns: window.innerWidth <= 768 ? '1fr' : 'repeat(auto-fit, minmax(320px, 1fr))',
+            gap: window.innerWidth <= 768 ? '20px' : '25px',
+            marginTop: window.innerWidth <= 768 ? '20px' : '40px'
           }}>
             {/* Projeto 1 - Design UI/UX */}
             <div style={{
@@ -2386,12 +2462,13 @@ function App() {
           </div>
 
           {/* Cards de Formação */}
-          <div style={{
+          <div className="education-grid" style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
-            gap: '30px',
+            gridTemplateColumns: window.innerWidth <= 768 ? '1fr' : 'repeat(auto-fit, minmax(350px, 1fr))',
+            gap: window.innerWidth <= 768 ? '20px' : '30px',
             maxWidth: '1000px',
-            margin: '0 auto'
+            margin: '0 auto',
+            padding: window.innerWidth <= 768 ? '0 10px' : '0'
           }}>
             {/* Graduação */}
             <div style={{
@@ -2630,12 +2707,13 @@ function App() {
               Certificações
             </h3>
             
-            <div style={{
+            <div className="certifications-grid" style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '20px',
+              gridTemplateColumns: window.innerWidth <= 768 ? '1fr' : 'repeat(auto-fit, minmax(280px, 1fr))',
+              gap: window.innerWidth <= 768 ? '15px' : '20px',
               maxWidth: '900px',
-              margin: '0 auto'
+              margin: '0 auto',
+              padding: window.innerWidth <= 768 ? '0 10px' : '0'
             }}>
               {/* Certificação 1 */}
               <div style={{
@@ -2815,8 +2893,8 @@ function App() {
            <div 
              style={{
                position: 'relative',
-               maxWidth: '90%',
-               maxHeight: '90%',
+               maxWidth: window.innerWidth <= 768 ? '95%' : '90%',
+               maxHeight: window.innerWidth <= 768 ? '95%' : '90%',
                animation: 'scaleIn 0.3s ease-out'
              }}
              onClick={(e) => e.stopPropagation()}
@@ -2826,7 +2904,7 @@ function App() {
               alt="Foto do Perfil - Visualização"
               style={{
                 maxWidth: '100%',
-                maxHeight: '80vh',
+                maxHeight: window.innerWidth <= 768 ? '70vh' : '80vh',
                 borderRadius: '8px',
                 objectFit: 'contain',
                 animation: 'zoomIn 0.4s ease-out 0.1s both',
@@ -2839,16 +2917,16 @@ function App() {
               onClick={closeProfilePreview}
               style={{
                 position: 'absolute',
-                top: '10px',
-                right: '10px',
+                top: window.innerWidth <= 768 ? '5px' : '10px',
+                right: window.innerWidth <= 768 ? '5px' : '10px',
                 backgroundColor: 'rgba(0, 0, 0, 0.6)',
                 color: 'white',
                 border: 'none',
                 borderRadius: '50%',
-                width: '40px',
-                height: '40px',
+                width: window.innerWidth <= 768 ? '35px' : '40px',
+                height: window.innerWidth <= 768 ? '35px' : '40px',
                 cursor: 'pointer',
-                fontSize: '18px',
+                fontSize: window.innerWidth <= 768 ? '16px' : '18px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
