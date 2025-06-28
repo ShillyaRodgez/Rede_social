@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.6548f28f.js",
-    "static/js/583.867cc2b1.chunk.js": "/portfolio/static/js/583.867cc2b1.chunk.js",
-    "static/js/319.5449352d.chunk.js": "/portfolio/static/js/319.5449352d.chunk.js",
-    "index.html": "/portfolio/index.html",
-    "main.6548f28f.js.map": "/portfolio/static/js/main.6548f28f.js.map",
-    "583.867cc2b1.chunk.js.map": "/portfolio/static/js/583.867cc2b1.chunk.js.map",
-    "319.5449352d.chunk.js.map": "/portfolio/static/js/319.5449352d.chunk.js.map"
+    "main.js": "/Boneco/static/js/main.3ec8649e.js",
+    "static/js/583.867cc2b1.chunk.js": "/Boneco/static/js/583.867cc2b1.chunk.js",
+    "static/js/319.5449352d.chunk.js": "/Boneco/static/js/319.5449352d.chunk.js",
+    "index.html": "/Boneco/index.html",
+    "main.3ec8649e.js.map": "/Boneco/static/js/main.3ec8649e.js.map",
+    "583.867cc2b1.chunk.js.map": "/Boneco/static/js/583.867cc2b1.chunk.js.map",
+    "319.5449352d.chunk.js.map": "/Boneco/static/js/319.5449352d.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.6548f28f.js"
+    "static/js/main.3ec8649e.js"
   ]
 }
