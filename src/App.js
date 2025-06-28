@@ -1004,7 +1004,8 @@ function App() {
             display: 'flex',
             flexWrap: 'wrap',
             gap: '5px',
-            marginTop: '10px'
+            marginTop: '10px',
+            justifyContent: 'center'
           }}>
         
           {tools.map((tool, index) => (
