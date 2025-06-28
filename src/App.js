@@ -1673,9 +1673,9 @@ function App() {
                   display: 'flex',
                   gap: '10px',
                   flexWrap: 'wrap'
-                }}>
+                }}>                  
                   <a 
-                    href="https://behance.net/usuario/ilustracoes" 
+                    href="https://www.behance.net/rodgez" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     style={{
