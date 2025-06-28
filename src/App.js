@@ -1381,7 +1381,7 @@ function App() {
                     📁 Ver Código
                   </a>
                   <a 
-                    href="https://react-app-demo.vercel.app" 
+                    href="https://shillyarodgez.github.io/Verbum/#/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     style={{
