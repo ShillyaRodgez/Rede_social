@@ -1353,7 +1353,7 @@ function App() {
                   flexWrap: 'wrap'
                 }}>
                   <a 
-                    href="https://github.com/usuario/projeto-react" 
+                    href="https://github.com/ShillyaRodgez/Verbum" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     style={{
