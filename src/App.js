@@ -1,4 +1,6 @@
 import React from 'react';
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 
 function App() {
   // Adicionar estilos CSS para animações
@@ -129,6 +131,58 @@ function App() {
 
   const toggleTheme = () => {
     setIsDarkTheme(!isDarkTheme);
+  };
+
+  const exportToPDF = async () => {
+    try {
+      // Criar um elemento temporário para capturar apenas o conteúdo do perfil
+      const element = document.querySelector('.profile-container') || document.body;
+      
+      // Configurações para html2canvas
+      const canvas = await html2canvas(element, {
+        scale: 2, // Maior qualidade
+        useCORS: true,
+        allowTaint: true,
+        backgroundColor: isDarkTheme ? '#1a202c' : '#ffffff',
+        width: element.scrollWidth,
+        height: element.scrollHeight
+      });
+      
+      // Criar PDF
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF({
+        orientation: 'portrait',
+        unit: 'mm',
+        format: 'a4'
+      });
+      
+      // Calcular dimensões para ajustar à página
+      const imgWidth = 210; // A4 width in mm
+      const pageHeight = 295; // A4 height in mm
+      const imgHeight = (canvas.height * imgWidth) / canvas.width;
+      let heightLeft = imgHeight;
+      
+      let position = 0;
+      
+      // Adicionar primeira página
+      pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+      heightLeft -= pageHeight;
+      
+      // Adicionar páginas adicionais se necessário
+      while (heightLeft >= 0) {
+        position = heightLeft - imgHeight;
+        pdf.addPage();
+        pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+        heightLeft -= pageHeight;
+      }
+      
+      // Salvar o PDF
+      pdf.save(`${userName.replace(/\s+/g, '_')}_Perfil.pdf`);
+      
+    } catch (error) {
+      console.error('Erro ao gerar PDF:', error);
+      alert('Erro ao gerar PDF. Tente novamente.');
+    }
   };
 
   const handleEditCover = (action) => {
@@ -715,9 +769,43 @@ function App() {
         {isDarkTheme ? '☀️' : '🌙'}
         {isDarkTheme ? 'Claro' : 'Escuro'}
       </button>
+      
+      {/* Botão de exportar PDF */}
+      <button
+        onClick={exportToPDF}
+        style={{
+          position: 'fixed',
+          top: window.innerWidth <= 768 ? '10px' : '20px',
+          right: window.innerWidth <= 768 ? '120px' : '150px',
+          zIndex: 1000,
+          backgroundColor: isDarkTheme ? '#4a5568' : '#ffffff',
+          color: isDarkTheme ? '#ffffff' : '#2d3748',
+          border: 'none',
+          borderRadius: '50px',
+          padding: window.innerWidth <= 768 ? '8px 12px' : '12px 20px',
+          cursor: 'pointer',
+          fontSize: window.innerWidth <= 768 ? '12px' : '14px',
+          fontWeight: '500',
+          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
+          transition: 'all 0.3s ease',
+          display: 'flex',
+          alignItems: 'center',
+          gap: window.innerWidth <= 768 ? '4px' : '8px'
+        }}
+        onMouseEnter={(e) => {
+          e.target.style.transform = 'translateY(-2px)';
+          e.target.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.2)';
+        }}
+        onMouseLeave={(e) => {
+          e.target.style.transform = 'translateY(0)';
+          e.target.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
+        }}
+      >
+        📄 Exportar PDF
+      </button>
 
       {/* Conteúdo do perfil */}
-      <div className="mobile-container" style={{
+      <div className="mobile-container profile-container" style={{
         padding: window.innerWidth <= 768 ? '20px 10px 10px' : '60px 20px 20px',
         background: isDarkTheme 
           ? 'linear-gradient(135deg, #2d3748 0%, #4a5568 100%)' 
@@ -2030,13 +2118,14 @@ function App() {
             {/* Experiência 1 - Atual */}
             <div style={{
               display: 'flex',
-              alignItems: 'center',
-              marginBottom: '60px',
-              position: 'relative'
+              justifyContent: 'space-between',
+              alignItems: 'center',              marginBottom: '60px',
+              position: 'relative',
+              width: '100%'
             }}>
               {/* Conteúdo à esquerda */}
               <div style={{
-                width: '45%',
+                width: 'calc(50% - 30px)',
                 textAlign: 'right',
                 paddingRight: '30px'
               }}>
@@ -2122,19 +2211,20 @@ function App() {
                 zIndex: 2
               }}></div>
 
-              {/* Espaço à direita */}
-              <div style={{ width: '45%' }}></div>
+
             </div>
 
             {/* Experiência 2 */}
             <div style={{
               display: 'flex',
+              justifyContent: 'space-between',
               alignItems: 'center',
               marginBottom: '60px',
-              position: 'relative'
+              position: 'relative',
+              width: '100%',
+              flexDirection: 'row-reverse'
             }}>
-              {/* Espaço à esquerda */}
-              <div style={{ width: '45%' }}></div>
+
 
               {/* Ponto central */}
               <div style={{
@@ -2152,7 +2242,7 @@ function App() {
 
               {/* Conteúdo à direita */}
               <div style={{
-                width: '45%',
+                width: 'calc(50% - 30px)',
                 paddingLeft: '30px'
               }}>
                 <div style={{
@@ -2226,13 +2316,15 @@ function App() {
             {/* Experiência 3 */}
             <div style={{
               display: 'flex',
+              justifyContent: 'space-between',
               alignItems: 'center',
               marginBottom: '60px',
-              position: 'relative'
+              position: 'relative',
+              width: '100%'
             }}>
               {/* Conteúdo à esquerda */}
               <div style={{
-                width: '45%',
+                width: 'calc(50% - 30px)',
                 textAlign: 'right',
                 paddingRight: '30px'
               }}>
@@ -2318,8 +2410,7 @@ function App() {
                 zIndex: 2
               }}></div>
 
-              {/* Espaço à direita */}
-              <div style={{ width: '45%' }}></div>
+
             </div>
 
             {/* Experiência 4 - Início */}
