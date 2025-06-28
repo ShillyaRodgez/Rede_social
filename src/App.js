@@ -2416,12 +2416,13 @@ function App() {
             {/* Experiência 4 - Início */}
             <div style={{
               display: 'flex',
+              justifyContent: 'space-between',
               alignItems: 'center',
               marginBottom: '40px',
-              position: 'relative'
+              position: 'relative',
+              width: '100%',
+              flexDirection: 'row-reverse'
             }}>
-              {/* Espaço à esquerda */}
-              <div style={{ width: '45%' }}></div>
 
               {/* Ponto central */}
               <div style={{
@@ -2439,7 +2440,7 @@ function App() {
 
               {/* Conteúdo à direita */}
               <div style={{
-                width: '45%',
+                width: 'calc(50% - 30px)',
                 paddingLeft: '30px'
               }}>
                 <div style={{
