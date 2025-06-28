@@ -219,27 +219,27 @@ function App() {
     setShowEditMenu(false);
   };
 
-  const handleMouseDown = (e) => {
+  const handleMouseDown = React.useCallback((e) => {
     if (isManualAdjustMode) {
       setIsDragging(true);
       setDragStart({ x: e.clientX, y: e.clientY });
       e.preventDefault();
     }
-  };
+  }, [isManualAdjustMode]);
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = React.useCallback((e) => {
     if (isDragging && isManualAdjustMode) {
       const deltaX = e.clientX - dragStart.x;
       const deltaY = e.clientY - dragStart.y;
       setCoverOffset({ x: deltaX, y: deltaY });
     }
-  };
+  }, [isDragging, isManualAdjustMode, dragStart]);
 
-  const handleMouseUp = () => {
+  const handleMouseUp = React.useCallback(() => {
     if (isDragging) {
       setIsDragging(false);
     }
-  };
+  }, [isDragging]);
 
   const exitManualAdjust = () => {
     setIsManualAdjustMode(false);
@@ -364,7 +364,7 @@ function App() {
         document.removeEventListener('mouseup', handleMouseUp);
       };
     }
-  }, [isManualAdjustMode, isDragging, dragStart, coverOffset]);
+  }, [isManualAdjustMode, handleMouseMove, handleMouseUp]);
 
   // Fechar menus quando sair da capa ou entrar na foto de perfil
   React.useEffect(() => {
@@ -1836,7 +1836,7 @@ function App() {
                   flexWrap: 'wrap'
                 }}>
                   <a 
-                    href="https://github.com/usuario/website-responsivo" 
+                    href="https://github.com/ShillyaRodgez/Data-Connecta" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     style={{
@@ -1864,7 +1864,7 @@ function App() {
                     💻 Ver Código
                   </a>
                   <a 
-                    href="https://website-responsivo.netlify.app" 
+                    href="https://shillyarodgez.github.io/Data-Connecta/#" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     style={{
