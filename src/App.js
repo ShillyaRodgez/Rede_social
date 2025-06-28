@@ -1703,7 +1703,7 @@ function App() {
                     🖼️ Ver Trabalhos
                   </a>
                   <a 
-                    href="https://instagram.com/usuario.design" 
+                    href="https://www.instagram.com/rodgez.design/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     style={{
