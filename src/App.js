@@ -1196,7 +1196,7 @@ function App() {
                     target="_blank" 
                     rel="noopener noreferrer"
                     style={{
-                      backgroundColor: isDarkTheme ? '#667eea' : '#667eea',
+                      backgroundColor: isDarkTheme ? '#8B5CF6' : '#8B5CF6',
                       color: 'white',
                       padding: '8px 16px',
                       borderRadius: '8px',
@@ -1518,7 +1518,7 @@ function App() {
                     target="_blank" 
                     rel="noopener noreferrer"
                     style={{
-                      backgroundColor: isDarkTheme ? '#667eea' : '#667eea',
+                      backgroundColor: isDarkTheme ? '#8B5CF6' : '#8B5CF6',
                       color: 'white',
                       padding: '8px 16px',
                       borderRadius: '8px',
@@ -1546,7 +1546,7 @@ function App() {
                     target="_blank" 
                     rel="noopener noreferrer"
                     style={{
-                      backgroundColor: isDarkTheme ? '#f093fb' : '#f093fb',
+                      backgroundColor: isDarkTheme ? '#8B5CF6' : '#8B5CF6',
                       color: 'white',
                       padding: '8px 16px',
                       borderRadius: '8px',
@@ -1559,11 +1559,11 @@ function App() {
                       gap: '6px'
                     }}
                     onMouseEnter={(e) => {
-                      e.target.style.backgroundColor = '#ed64a6';
+                      e.target.style.backgroundColor = '#7C3AED';
                       e.target.style.transform = 'translateY(-2px)';
                     }}
                     onMouseLeave={(e) => {
-                      e.target.style.backgroundColor = '#f093fb';
+                      e.target.style.backgroundColor = '#8B5CF6';
                       e.target.style.transform = 'translateY(0)';
                     }}
                   >
@@ -1679,7 +1679,7 @@ function App() {
                     target="_blank" 
                     rel="noopener noreferrer"
                     style={{
-                      backgroundColor: isDarkTheme ? '#ff6b6b' : '#ff6b6b',
+                      backgroundColor: isDarkTheme ? '#8B5CF6' : '#8B5CF6',
                       color: 'white',
                       padding: '8px 16px',
                       borderRadius: '8px',
@@ -1692,11 +1692,11 @@ function App() {
                       gap: '6px'
                     }}
                     onMouseEnter={(e) => {
-                      e.target.style.backgroundColor = '#e55656';
+                      e.target.style.backgroundColor = '#7C3AED';
                       e.target.style.transform = 'translateY(-2px)';
                     }}
                     onMouseLeave={(e) => {
-                      e.target.style.backgroundColor = '#ff6b6b';
+                      e.target.style.backgroundColor = '#8B5CF6';
                       e.target.style.transform = 'translateY(0)';
                     }}
                   >
@@ -1707,7 +1707,7 @@ function App() {
                     target="_blank" 
                     rel="noopener noreferrer"
                     style={{
-                      backgroundColor: isDarkTheme ? '#4ecdc4' : '#4ecdc4',
+                      backgroundColor: isDarkTheme ? '#8B5CF6' : '#8B5CF6',
                       color: 'white',
                       padding: '8px 16px',
                       borderRadius: '8px',
@@ -1720,11 +1720,11 @@ function App() {
                       gap: '6px'
                     }}
                     onMouseEnter={(e) => {
-                      e.target.style.backgroundColor = '#26d0ce';
+                      e.target.style.backgroundColor = '#7C3AED';
                       e.target.style.transform = 'translateY(-2px)';
                     }}
                     onMouseLeave={(e) => {
-                      e.target.style.backgroundColor = '#4ecdc4';
+                      e.target.style.backgroundColor = '#8B5CF6';
                       e.target.style.transform = 'translateY(0)';
                     }}
                   >
@@ -1840,7 +1840,7 @@ function App() {
                     target="_blank" 
                     rel="noopener noreferrer"
                     style={{
-                      backgroundColor: isDarkTheme ? '#38b2ac' : '#38b2ac',
+                      backgroundColor: isDarkTheme ? '#8B5CF6' : '#8B5CF6',
                       color: 'white',
                       padding: '8px 16px',
                       borderRadius: '8px',
@@ -1853,11 +1853,11 @@ function App() {
                       gap: '6px'
                     }}
                     onMouseEnter={(e) => {
-                      e.target.style.backgroundColor = '#319795';
+                      e.target.style.backgroundColor = '#7C3AED';
                       e.target.style.transform = 'translateY(-2px)';
                     }}
                     onMouseLeave={(e) => {
-                      e.target.style.backgroundColor = '#38b2ac';
+                      e.target.style.backgroundColor = '#8B5CF6';
                       e.target.style.transform = 'translateY(0)';
                     }}
                   >
@@ -1868,7 +1868,7 @@ function App() {
                     target="_blank" 
                     rel="noopener noreferrer"
                     style={{
-                      backgroundColor: isDarkTheme ? '#81e6d9' : '#81e6d9',
+                      backgroundColor: isDarkTheme ? '#8B5CF6' : '#8B5CF6',
                       color: 'white',
                       padding: '8px 16px',
                       borderRadius: '8px',
@@ -1881,11 +1881,11 @@ function App() {
                       gap: '6px'
                     }}
                     onMouseEnter={(e) => {
-                      e.target.style.backgroundColor = '#4fd1c7';
+                      e.target.style.backgroundColor = '#7C3AED';
                       e.target.style.transform = 'translateY(-2px)';
                     }}
                     onMouseLeave={(e) => {
-                      e.target.style.backgroundColor = '#81e6d9';
+                      e.target.style.backgroundColor = '#8B5CF6';
                       e.target.style.transform = 'translateY(0)';
                     }}
                   >
