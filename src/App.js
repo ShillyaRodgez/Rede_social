@@ -1,100 +1,59 @@
 import React from 'react';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+/* Estilos Gerais */
+.profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;<div id="profile-container" style={{
+  maxWidth: '1200px',
+  margin: '0 auto',
+  padding: '20px',
+  fontFamily: '"Inter", sans-serif',
+  backgroundColor: isDarkTheme ? '#121212' : '#f0f2f5',
+  color: isDarkTheme ? '#ffffff' : '#000000',
+  minHeight: '100vh',
+  transition: 'background-color 0.3s, color 0.3s',
+}}><div id="profile-container" className={`profile-container ${isDarkTheme ? 'dark' : ''}`}></div>
+  font-family: 'Inter', sans-serif;
+  background-color: #f0f2f5;
+  color: #000000;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.profile-container.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-header h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #000000;
+}
+
+.profile-container.dark .theme-toggle {
+  color: #ffffff;
+}
+
+/* Adicione o restante dos seus estilos aqui, convertendo-os de inline para classes CSS */import './App.css';
 
 function App() {
-  // Adicionar estilos CSS para animações
-  React.useEffect(() => {
-    const style = document.createElement('style');
-    style.textContent = `
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-      
-      @keyframes scaleIn {
-        from {
-          opacity: 0;
-          transform: scale(0.8);
-        }
-        to {
-          opacity: 1;
-          transform: scale(1);
-        }
-      }
-      
-      /* Responsividade Mobile */
-      @media (max-width: 768px) {
-        .mobile-responsive {
-          padding: 10px !important;
-          margin: 10px !important;
-        }
-        
-        .mobile-text-small {
-          font-size: 14px !important;
-        }
-        
-        .mobile-text-medium {
-          font-size: 18px !important;
-        }
-        
-        .mobile-text-large {
-          font-size: 24px !important;
-        }
-        
-        .mobile-grid {
-          grid-template-columns: 1fr !important;
-          gap: 15px !important;
-        }
-        
-        .mobile-hide {
-          display: none !important;
-        }
-        
-        .mobile-full-width {
-          width: 100% !important;
-          max-width: 100% !important;
-        }
-        
-        .mobile-center {
-          text-align: center !important;
-        }
-        
-        .mobile-padding {
-          padding: 15px !important;
-        }
-        
-        .mobile-margin {
-          margin: 10px 0 !important;
-        }
-      }
-      
-      @media (max-width: 480px) {
-        .mobile-small-responsive {
-          padding: 8px !important;
-          margin: 8px !important;
-        }
-        
-        .mobile-small-text {
-          font-size: 12px !important;
-        }
-        
-        .mobile-small-grid {
-          grid-template-columns: 1fr !important;
-          gap: 10px !important;
-        }
-      }
-    `;
-    document.head.appendChild(style);
-    
-    return () => {
-      document.head.removeChild(style);
-    };
-  }, []);
 
   const tools = [
     { name: 'Illustrator', icon: '/images/illustrador.png' },
