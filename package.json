@@ -2,7 +2,7 @@
   "name": "boneco-profile",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Shillya-Rodgez.github.io/Boneco",
+  "homepage": "https://shillyarodgez.github.io/portfolio/",
   "dependencies": {
     "html2canvas": "^1.4.1",
     "jspdf": "^3.0.1",
