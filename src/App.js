@@ -1220,7 +1220,7 @@ function App() {
                     📁 Ver Código
                   </a>
                   <a 
-                    href="https://projeto-demo.netlify.app" 
+                    href="https://shillyarodgez.github.io/Verbum/#/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     style={{
